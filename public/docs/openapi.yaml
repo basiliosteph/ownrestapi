@@ -1,0 +1,504 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/products:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    -
+                      id: 1
+                      title: 'Aespa - Girls 2nd Mini Album (Kwangya Version)'
+                      description: 'Photocard (random 1 out of 4)'
+                      currency: PHP
+                      price: '908.00'
+                      brand: aespa
+                      category: album
+                      image: 'https://www.cnaphils.com.ph/image/cache/catalog/Album/SME/AESPA/GIRLS/ONHAND/aespa---GIRLS_KWANGYA-01-NETA-800x1064.jpg'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 2
+                      title: 'AESPA - Official Lightstick'
+                      description: 'Power: AAA Batteries 3EA (Battery not included)'
+                      currency: PHP
+                      price: '2499.00'
+                      brand: aespa
+                      category: lightstick
+                      image: 'https://www.cnaphils.com.ph/image/cache/catalog/GOODS/SME/aespa/LIGHTSTICK/aespa-LIGHTSTICK-01-ON-HAND-800x1064.jpg'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 3
+                      title: 'AESPA - Forever Cashbee Transportation Card'
+                      description: '1 Cashbee Card'
+                      currency: PHP
+                      price: '260.00'
+                      brand: aespa
+                      category: card
+                      image: 'https://www.cnaphils.com.ph/image/cache/catalog/GOODS/SME/aespa/01-800x1064.jpg'
+                      created_at: null
+                      updated_at: null
+                  '0': 200
+                properties:
+                  products:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Aespa - Girls 2nd Mini Album (Kwangya Version)'
+                        description: 'Photocard (random 1 out of 4)'
+                        currency: PHP
+                        price: '908.00'
+                        brand: aespa
+                        category: album
+                        image: 'https://www.cnaphils.com.ph/image/cache/catalog/Album/SME/AESPA/GIRLS/ONHAND/aespa---GIRLS_KWANGYA-01-NETA-800x1064.jpg'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 2
+                        title: 'AESPA - Official Lightstick'
+                        description: 'Power: AAA Batteries 3EA (Battery not included)'
+                        currency: PHP
+                        price: '2499.00'
+                        brand: aespa
+                        category: lightstick
+                        image: 'https://www.cnaphils.com.ph/image/cache/catalog/GOODS/SME/aespa/LIGHTSTICK/aespa-LIGHTSTICK-01-ON-HAND-800x1064.jpg'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 3
+                        title: 'AESPA - Forever Cashbee Transportation Card'
+                        description: '1 Cashbee Card'
+                        currency: PHP
+                        price: '260.00'
+                        brand: aespa
+                        category: card
+                        image: 'https://www.cnaphils.com.ph/image/cache/catalog/GOODS/SME/aespa/01-800x1064.jpg'
+                        created_at: null
+                        updated_at: null
+                    items:
+                      type: object
+                  0:
+                    type: integer
+                    example: 200
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/{product_id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    id: 1
+                    title: 'Aespa - Girls 2nd Mini Album (Kwangya Version)'
+                    description: 'Photocard (random 1 out of 4)'
+                    currency: PHP
+                    price: '908.00'
+                    brand: aespa
+                    category: album
+                    image: 'https://www.cnaphils.com.ph/image/cache/catalog/Album/SME/AESPA/GIRLS/ONHAND/aespa---GIRLS_KWANGYA-01-NETA-800x1064.jpg'
+                    created_at: null
+                    updated_at: null
+                  '0': 200
+                properties:
+                  products:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Aespa - Girls 2nd Mini Album (Kwangya Version)'
+                      description: 'Photocard (random 1 out of 4)'
+                      currency: PHP
+                      price: '908.00'
+                      brand: aespa
+                      category: album
+                      image: 'https://www.cnaphils.com.ph/image/cache/catalog/Album/SME/AESPA/GIRLS/ONHAND/aespa---GIRLS_KWANGYA-01-NETA-800x1064.jpg'
+                      created_at: null
+                      updated_at: null
+                  0:
+                    type: integer
+                    example: 200
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: sit
+                description:
+                  type: string
+                  description: ''
+                  example: fugit
+                currency:
+                  type: string
+                  description: ''
+                  example: occaecati
+                price:
+                  type: string
+                  description: ''
+                  example: nam
+                brand:
+                  type: string
+                  description: ''
+                  example: voluptatum
+                category:
+                  type: string
+                  description: ''
+                  example: itaque
+                image:
+                  type: string
+                  description: ''
+                  example: ipsum
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/products/search/{keywords}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products: []
+                properties:
+                  products:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: keywords
+        description: ''
+        example: illum
+        required: true
+        schema:
+          type: string
+  /api/products/category/categories:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  categories:
+                    - album
+                    - lightstick
+                    - card
+                properties:
+                  categories:
+                    type: array
+                    example:
+                      - album
+                      - lightstick
+                      - card
+                    items:
+                      type: string
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/category/{category_name}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: category_name
+        description: ''
+        example: accusantium
+        required: true
+        schema:
+          type: string
+  /api/products/add:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: nostrum
+                description:
+                  type: string
+                  description: ''
+                  example: sunt
+                currency:
+                  type: string
+                  description: ''
+                  example: incidunt
+                price:
+                  type: string
+                  description: ''
+                  example: reprehenderit
+                brand:
+                  type: string
+                  description: ''
+                  example: autem
+                category:
+                  type: string
+                  description: ''
+                  example: pariatur
+                image:
+                  type: string
+                  description: ''
+                  example: veritatis
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
